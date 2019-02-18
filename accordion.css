@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+:root {
+  --radius: 10px;
+  --margin: 10px;
+  --margin-neg: -10px;
+  --padding: 2rem;
+}
+
+.accordion {
+  border-radius: var(--radius);
+  border-left: var(--margin) solid rgb(160, 88, 16);
+}
+
+.accordion img {
+  width: 80px;
+  margin-right: 2rem;
+  float: left;
+}
+
+.accordion-header {
+  position: relative;
+  margin-left: var(--margin-neg);
+  padding-left: var( --padding);
+  padding-bottom: calc( var( --padding) / 2);
+  padding-top: calc( var( --padding) / 2);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.accordion-header::after {
+  content: attr(data-marker);
+  font-size: 1.5rem;
+  font-weight: bolder;
+  position: absolute;
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  top: 0.5rem;
+  left: calc( 100% - 2rem );
+}
+
+.accordion-item {
+  box-sizing: border-box;
+  font-family: 'Deja Vu', sans-serif;
+  font-size: 1.2rem;
+}
+
+.accordion-item:last-child {
+  border-bottom-right-radius: var(--radius);
+}
+
+.accordion-item:first-child {
+  border-top-right-radius: var(--radius);
+}
+
+.accordion-item:last-child .card {
+  border-bottom-right-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+}
+
+.accordion-item:first-child .accordion-header {
+  border-top-right-radius: var(--radius);
+  border-top-left-radius: var(--radius);
+}
+
+.card {
+  text-align: left;
+  margin-left: var(--margin-neg);
+  padding: calc(var(--padding) / 2) var(--padding) calc(var(--padding) * 2) var(--padding);
+  opacity: 0.7;
+}
+
+.yellow {
+  background: rgb(239, 194, 31);
+}
+
+.green {
+  background: rgb(109, 158, 114);
+}
+
+.brown {
+  background: rgb(221, 115, 8, 0.8);
+  /* opacity: 0.8; */
+}
+
+.red {
+  background: rgb(232, 48, 27);
+}
