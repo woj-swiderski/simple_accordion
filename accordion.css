@@ -71,19 +71,3 @@
   padding: calc(var(--padding) / 2) var(--padding) calc(var(--padding) * 2) var(--padding);
   opacity: 0.7;
 }
-
-.yellow {
-  background: rgb(239, 194, 31);
-}
-
-.green {
-  background: rgb(109, 158, 114);
-}
-
-.brown {
-  background: rgb(221, 115, 8);
-}
-
-.red {
-  background: rgb(232, 48, 27);
-}

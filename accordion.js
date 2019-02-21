@@ -6,6 +6,16 @@ for (let ll of l)  {
   }
 }
 
+const i = document.querySelectorAll('.accordion-item');
+for (let ii of i) {
+    if (ii.dataset.color === undefined) {
+        ii.style.backgroundColor = '#93ED94'
+    }
+    else {
+        ii.style.backgroundColor = ii.dataset.color;
+    }
+}
+
 function showHide(e) {
   let close = false;
   if (this.dataset.marker === '+') {
